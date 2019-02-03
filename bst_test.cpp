@@ -963,31 +963,21 @@ void test_bazenn01() {
     cout << "Ending test_bazen01" << endl;
 }
 
-//Test by Khiam Rehman	
-void test_khiam01() {
-  cout << "Starting test_khiam01" << endl;
-  cout << "Testing numberOfNodes()" << endl;
-
-  BST<int> testTree;
-  testTree.Add(15);
-  testTree.Add(65);
-  testTree.Add(17);
-  testTree.Add(75);
-  testTree.Add(96);
-  testTree.Add(12);
-  testTree.Add(45);
-  testTree.Add(32);
-  testTree.Add(11);
-  testTree.Add(71);
-  assert(testTree.NumberOfNodes() == 10);
-
-  testTree.Remove(45);
-  testTree.Remove(32);
-  testTree.Remove(11);
-  testTree.Remove(11);
-  assert(testTree.NumberOfNodes() == 7)
-
-  cout << "Ending test_khiam01" << endl;
+// Testing getHeight function
+void test_temeatuw02() {
+  cout << "Staring test_temeatuw02" << endl;
+  cout << "* Testing getHeight function" << endl;
+  BST<string> b1;
+  // when the tree is empty
+  assert(b1.getHeight() == 0);
+  b1.Add("a");
+  b1.Add("b");
+  b1.Add("c");
+  b1.Add("d");
+  b1.Add("e");
+  // after putting in 5 items
+  assert(b1.getHeight() == 3);
+  cout << "Ending test_temeatuw02" << endl;
 }
 	
 // Calling all test functions
@@ -1020,7 +1010,7 @@ void testBSTAll() {
   test_hsokol8();
   test_codyt23();
   test_bazenn01();
-  test_khiam01();
+  test_temeatuw02();
 }
 
 TEST_CASE("BST Tests") {
