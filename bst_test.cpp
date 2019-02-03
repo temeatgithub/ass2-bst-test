@@ -962,6 +962,25 @@ void test_bazenn01() {
 
     cout << "Ending test_bazen01" << endl;
 }
+
+// Testing == after emptying the tree using Clear method
+void test_temeatuw01() {
+  cout << "Staring test_temeatuw01" << endl;
+  cout << "* Testing == after emptying the tree using Clear method" << endl;
+  BST<string> b1;
+  BST<string> b2;
+  b1.Add("a");
+  b1.Add("A");
+  b2.Add("b");
+  b2.Add("B");
+  // != before clearing the must be not equal
+  assert(b1 != b2);
+  b1.Clear();
+  b2.Clear();
+  // == after clearing
+  assert(b1 == b2);
+  cout << "Ending test_temeatuw01" << endl;
+}
 	
 // Calling all test functions
 void testBSTAll() {
@@ -993,6 +1012,7 @@ void testBSTAll() {
   test_hsokol8();
   test_codyt23();
   test_bazenn01();
+  test_temeatuw01();
 }
 
 TEST_CASE("BST Tests") {
