@@ -982,6 +982,23 @@ void test_temeatuw01() {
   cout << "Ending test_temeatuw01" << endl;
 }
 	
+// Testing getHeight function
+void test_temeatuw02() {
+  cout << "Staring test_temeatuw02" << endl;
+  cout << "* Testing getHeight function" << endl;
+  BST<string> b1;
+  // when the tree is empty
+  assert(b1.getHeight() == 0);
+  b1.Add("a");
+  b1.Add("b");
+  b1.Add("c");
+  b1.Add("d");
+  b1.Add("e");
+  // after putting in 5 items
+  assert(b1.getHeight() == 3);
+  cout << "Ending test_temeatuw02" << endl;
+}
+	
 // Calling all test functions
 void testBSTAll() {
   test_pisan01();
@@ -1013,6 +1030,7 @@ void testBSTAll() {
   test_codyt23();
   test_bazenn01();
   test_temeatuw01();
+  test_temeatuw02();
 }
 
 TEST_CASE("BST Tests") {
